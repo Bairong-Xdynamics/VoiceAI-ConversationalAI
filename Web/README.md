@@ -1,4 +1,4 @@
-# Voice Call JS SDK
+# Baiyu Intelligent Voice Call JS SDK
 
 > A lightweight real-time intelligent voice conversation SDK based on WebRTC, enabling quick integration of high-quality voice AI interaction into web applications.
 

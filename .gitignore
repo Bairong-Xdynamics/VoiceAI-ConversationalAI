@@ -1,0 +1,86 @@
+# ====================
+# Node.js / Web
+# ====================
+node_modules/
+dist/
+lib/
+es/
+coverage/
+.nyc_output/
+*.tsbuildinfo
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 包管理器缓存
+.npm/
+.yarn/cache/
+.pnp.*
+.pnpm-store/
+
+# ====================
+# Android
+# ====================
+*.iml
+.gradle/
+local.properties
+.idea/
+build/
+captures
+.externalNativeBuild
+.cxx
+.kotlin/
+
+# 签名敏感文件
+*.jks
+*.keystore
+
+# ====================
+# iOS / Xcode
+# ====================
+xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.xcarchive
+
+# Swift Package Manager
+.build/
+
+# CocoaPods
+Pods/
+
+# ====================
+# IDE / Editor
+# ====================
+.vscode/
+.cursor/
+*.swp
+*.swo
+*~
+*.bak
+*.backup
+
+# ====================
+# OS generated files
+# ====================
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# ====================
+# Misc & Sensitive
+# ====================
+*.log
+*.tmp
+*.pem
+*.key

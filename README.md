@@ -1,39 +1,40 @@
 # VoiceAI-ConversationalAI
 
-[License: MIT](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> 一站式智能语音对话解决方案 —— 为 Web、Android、iOS 提供轻量级实时语音交互 SDK，快速集成 AI 智能体语音对话能力。
+> One‑stop intelligent voice conversation solution – lightweight real‑time voice interaction SDKs for Web, Android, and iOS, enabling quick integration of AI agent voice capabilities.
 
-## 特性
+## Features
 
-- 🎤 **全平台覆盖** – 提供 Web (JavaScript/TypeScript)、Android (Kotlin/Java)、iOS (Swift) SDK
-- 🔐 **安全认证** – 支持平台密钥/令牌认证，生产环境可动态换取临时凭证
-- 🎙️ **实时语音对话** – 基于 WebRTC 的低延迟双向语音识别与合成
-- 🛑 **打断支持** – 随时打断机器人回复，实现自然对话体验
-- 🔇 **音频控制** – 动态静音/取消静音麦克风
-- 📡 **丰富事件系统** – 会话生命周期、消息流、错误等完整事件通知
-- 📦 **开箱即用** – 封装底层 WebRTC、音频采集播放、连接管理等细节
-
-## 各平台 SDK 概览
+- 🎤 **Cross‑platform** – SDKs for Web (JavaScript/TypeScript), Android (Kotlin/Java), and iOS (Swift)
+- 🔐 **Secure Authentication** – Platform key/token auth with support for dynamic temporary credentials in production
+- 🎙️ **Real‑time Voice Conversation** – Low‑latency bidirectional speech recognition and synthesis via WebRTC
+- 🛑 **Interruption Support** – Interrupt the robot’s reply at any time for natural conversations
+- 🔇 **Audio Control** – Dynamic microphone muting/unmuting
+- 📡 **Rich Event System** – Session lifecycle, message streaming, errors, and more
+- 📦 **Out‑of‑the‑box** – Encapsulates WebRTC, audio capture/playback, and connection management
 
 
-| 平台      | 语言                      | 核心类               | 状态     |
-| ------- | ----------------------- | ----------------- | ------ |
-| Web     | JavaScript / TypeScript | `ChatClient`      | ✅ 可用   |
-| Android | Kotlin / Java           | `VoiceChatClient` | 🚧 开发中 |
-| iOS     | Swift                   | `VoiceChatClient` | 🚧 开发中 |
+## SDK Overview per Platform
+
+| Platform | Language | Status |
+|----------|----------|--------|
+| Web | JavaScript / TypeScript | ✅ Available |
+| Android | Kotlin / Java | ✅ Available |
+| iOS | Swift / Objective-C | ✅ Available |
+
+> See each subdirectory’s README for detailed API docs and usage examples.
+
+## Common Prerequisites
+
+1. Create an Agent on your voice AI platform (Bairong Baigong) and obtain `robotKey` + `robotToken`
+2. Ensure the client runs in a secure environment:
+   - Web: HTTPS or localhost
+   - Android / iOS: normal network permissions
+3. Handle microphone permission requests (user consent)
 
 
-> 具体 API 文档和使用示例请见各子目录下的 README。
-
-## 通用接入前提
-
-1. 在智能语音对话平台（百融百工）创建 Agent，获取 `robotKey` 和 `robotToken`
-2. 确保客户端运行在安全环境：
-  - Web：HTTPS 或 localhost
-  - Android / iOS：正常网络权限
-3. 处理麦克风权限请求（用户授权）
-
-## 许可证
+## License
 
 MIT © VoiceAI Team
+
