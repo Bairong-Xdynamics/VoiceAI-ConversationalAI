@@ -1,11 +1,13 @@
-# Baiyu Intelligent Voice Call iOS SDK
+# Baigong Intelligent Voice Call iOS SDK
 
-> A lightweight real-time intelligent voice conversation SDK based on WebRTC, for quickly integrating high-quality voice interaction into iOS applications.
+English | [简体中文](README.zh-CN.md)
+
+A lightweight real-time intelligent voice conversation SDK based on WebRTC, for quickly integrating high-quality voice interaction into iOS applications.
 
 ## Product Overview
-The Baiyu Intelligent Voice Call iOS SDK encapsulates low-level logic including server connection, audio capture/playback, and conversation control. Developers can integrate end-to-end real-time voice capabilities into iOS apps in just 10 minutes.
+The Baigong Intelligent Voice Call iOS SDK encapsulates low-level logic including server connection, audio capture/playback, and conversation control. Developers can integrate end-to-end real-time voice capabilities into iOS apps in just 10 minutes.
 
-Deeply integrated with Baiyu platform agents, it is suitable for intelligent customer service, voice assistants, smart outbound calls and other scenarios.
+Deeply integrated with Baigong platform agents, it is suitable for intelligent customer service, voice assistants, smart outbound calls and other scenarios.
 
 ## Key Features
 - 🎤 **Out-of-the-box**: Encapsulates WebRTC, audio processing, connection management and other low-level details
@@ -19,16 +21,15 @@ Deeply integrated with Baiyu platform agents, it is suitable for intelligent cus
 ## Prerequisites
 Before using this SDK:
 
-1. Create an Agent (Robot) on the [Bairong Baiyu Platform](https://alidocs.dingtalk.com/i/nodes/QBnd5ExVEanmejPpT29ZQ1R7VyeZqMmz)
-2. Publish the agent via API mode to obtain `robotKey` and `robotToken`
-3. Target iOS 13.0 or higher; only real devices are supported
+1. Refer to [Voice Call Integration Preparation](https://docs-agentos.resultscloud.com/api-reference/agent/voice-prep) to create an Agent. After completing the API-based release, obtain the access credentials `robotKey` and `robotToken`.
+2. Target iOS 13.0 or higher; only real devices are supported
 
 > ⚠️ `robotKey` and `robotToken` are sensitive credentials. Keep them secure to avoid billing loss. Use server-side temporary tokens in production. **Never hardcode them in client code.**
 
 ## Quick Start
 
 ### 1. Import SDK into Project
-1. Download and extract the production SDK package to get `BRAIVoiceRTCKit.framework`
+1. Download and extract the SDK package from this repo's [GitHub Releases](https://github.com/Bairong-Xdynamics/VoiceAI-ConversationalAI/releases) to get `BRAIVoiceRTCKit.framework`
 2. Open your Xcode project, right-click the project name and select **Add Files to "ProjectName"…**
 3. Select `BRAIVoiceRTCKit.framework`, check **Copy items if needed**, select your target in Add to targets, then click Add
 
@@ -218,8 +219,8 @@ Core manager class for session management and conversation control.
 ```
 
 **Parameters**
-- `robotKey: NSString` – Agent key from Baiyu Platform
-- `robotToken: NSString` – Agent token from Baiyu Platform
+- `robotKey: NSString` – Agent key from Baigong Platform
+- `robotToken: NSString` – Agent token from Baigong Platform
 - `userName: NSString` – Unique user identifier (required, must be unique per user)
 
 #### Methods

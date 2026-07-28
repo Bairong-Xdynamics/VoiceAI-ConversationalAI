@@ -1,11 +1,13 @@
-# Baiyu Intelligent Voice Call Android SDK
+# Baigong Intelligent Voice Call Android SDK
 
-> A lightweight real-time intelligent voice conversation SDK based on WebRTC, for quickly integrating high-quality voice interaction into Android applications.
+English | [简体中文](README.zh-CN.md)
+
+A lightweight real-time intelligent voice conversation SDK based on WebRTC, for quickly integrating high-quality voice interaction into Android applications.
 
 ## Product Overview
-The Baiyu Intelligent Voice Call Android SDK encapsulates low-level logic including server connection, audio capture/playback, and conversation control. Developers can integrate end-to-end real-time voice capabilities into Android apps in just 10 minutes.
+The Baigong Intelligent Voice Call Android SDK encapsulates low-level logic including server connection, audio capture/playback, and conversation control. Developers can integrate end-to-end real-time voice capabilities into Android apps in just 10 minutes.
 
-Deeply integrated with Baiyu platform agents, it is suitable for intelligent customer service, voice assistants, smart outbound calls and other scenarios.
+Deeply integrated with Baigong platform agents, it is suitable for intelligent customer service, voice assistants, smart outbound calls and other scenarios.
 
 ## Key Features
 - 🎤 **Out-of-the-box**: Encapsulates WebRTC, audio processing, connection management and other low-level details
@@ -19,16 +21,15 @@ Deeply integrated with Baiyu platform agents, it is suitable for intelligent cus
 ## Prerequisites
 Before using this SDK:
 
-1. Create an Agent (Robot) on the [Bairong Baiyu Platform](https://alidocs.dingtalk.com/i/nodes/QBnd5ExVEanmejPpT29ZQ1R7VyeZqMmz)
-2. Publish the agent via API mode to obtain `robotKey` and `robotToken`
-3. Target Android 7.0 (API 24) or higher
+1. Refer to [Voice Call Integration Preparation](https://docs-agentos.resultscloud.com/api-reference/agent/voice-prep) to create an Agent. After completing the API-based release, obtain the access credentials `robotKey` and `robotToken`.
+2. Target Android 7.0 (API 24) or higher
 
 > ⚠️ `robotKey` and `robotToken` are sensitive credentials. Keep them secure to avoid billing loss. Use server-side temporary tokens in production. **Never hardcode them in client code.**
 
 ## Quick Start
 
 ### 1. Import SDK
-Place `BR_AI_Voice_RTC_x.x.x.aar` into your module's `libs/` directory, then add the dependency in `build.gradle.kts`:
+Download `BR_AI_Voice_RTC_x.x.x.aar` from this repo's [GitHub Releases](https://github.com/Bairong-Xdynamics/VoiceAI-ConversationalAI/releases), then place it into your module's `libs/` directory and add the dependency in `build.gradle.kts`:
 
 ```kotlin
 dependencies {
@@ -67,8 +68,8 @@ import com.brgroup.voice.ai.ErrorMessage
 // 1. Create client after microphone permission is granted
 val client = ChatClient(
     context = applicationContext,
-    robotKey = "your_robot_key",      // from Baiyu Platform
-    robotToken = "your_robot_token",  // from Baiyu Platform
+    robotKey = "your_robot_key",      // from Baigong Platform
+    robotToken = "your_robot_token",  // from Baigong Platform
     userName = "unique-user-id"       // unique user ID
 )
 
@@ -201,8 +202,8 @@ ChatClient(
 
 **Parameters**
 - `context: Context` – Application context (use `applicationContext` recommended)
-- `robotKey: String` – Agent key from Baiyu Platform
-- `robotToken: String` – Agent token from Baiyu Platform
+- `robotKey: String` – Agent key from Baigong Platform
+- `robotToken: String` – Agent token from Baigong Platform
 - `userName: String` – Unique user identifier (required, must be unique per user)
 
 #### Methods

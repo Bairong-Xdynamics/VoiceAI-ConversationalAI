@@ -1,8 +1,8 @@
 # VoiceAI-ConversationalAI
 
-[License: MIT](https://opensource.org/licenses/MIT)
+简体中文 | [English](README.md)
 
-> 一站式智能语音对话解决方案 —— 为 Web、Android、iOS 提供轻量级实时语音交互 SDK，快速集成 AI 智能体语音对话能力。
+一站式智能语音对话解决方案 —— 为 Web、Android、iOS 提供轻量级实时语音交互 SDK，快速集成 AI 智能体语音对话能力。
 
 ## 特性
 
@@ -28,11 +28,11 @@
 
 ## 通用接入前提
 
-1. 在智能语音对话平台（百融百语）创建 Agent，获取 `robotKey` 和 `robotToken`
-2. 确保客户端运行在安全环境：
-  - Web：HTTPS 或 localhost
-  - Android / iOS：正常网络权限
-3. 处理麦克风权限请求（用户授权）
+1. 参考 [语音通话接入准备工作](https://docs-agentos.resultscloud.com/api-reference/agent/voice-prep) 创建智能体 Agent，完成 API 方式发布后，获取接入凭证 `robotKey` 和 `robotToken`
+2. 确保客户端运行在合规安全环境中：
+   - Web 端：必须在 HTTPS 或 localhost 环境下运行（浏览器安全策略要求）
+   - Android / iOS 端：已配置网络权限与麦克风权限
+3. 适配对应端的系统权限申请流程，引导用户完成麦克风授权
 
 ## 许可证
 

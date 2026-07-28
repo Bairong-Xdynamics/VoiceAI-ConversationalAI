@@ -84,3 +84,9 @@ ehthumbs.db
 *.tmp
 *.pem
 *.key
+
+# ====================
+# SDK 二进制（不入库，走 GitHub Releases 分发）
+# ====================
+iOS/BRAIVoiceRTCDemo/RTCSDK/
+Android/BrAiVoiceRTCDemo/app/libs/*.aar

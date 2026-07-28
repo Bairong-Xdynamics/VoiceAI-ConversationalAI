@@ -1,6 +1,8 @@
-# 百语智能语音通话 JS SDK
+# 百工智能语音通话 JS SDK
 
-> 轻量级的实时智能语音对话 SDK，基于 WebRTC 技术，为 Web 应用快速集成高质量的智能语音交互体验。
+简体中文 | [English](README.md)
+
+轻量级的实时智能语音对话 SDK，基于 WebRTC 技术，为 Web 应用快速集成高质量的智能语音交互体验。
 
 ## 快速开始
 
@@ -66,9 +68,8 @@ try {
 
 使用本 SDK 前，您需要：
 
-1. 在 [百融百语平台](https://alidocs.dingtalk.com/i/nodes/QBnd5ExVEanmejPpT29ZQ1R7VyeZqMmz) 创建智能体 Agent（Robot）
-2. 完成 API 方式发布，获取 `robotKey` 和 `robotToken`
-3. 确保您的应用运行在安全上下文（HTTPS 或 localhost）中
+1. 参考 [语音通话接入准备工作](https://docs-agentos.resultscloud.com/api-reference/agent/voice-prep) 创建智能体 Agent，完成 API 方式发布后，获取接入凭证 `robotKey` 和 `robotToken`
+2. 确保您的应用运行在安全上下文（HTTPS 或 localhost）中
 
 > ⚠️ `robotKey` 和 `robotToken` 是敏感凭证，请妥善保管，避免泄露造成计费损失。生产环境建议通过服务端换取临时凭证。
 
@@ -224,4 +225,4 @@ npm run demo
 
 ## 文档链接
 
-- 待补充
+- [官方 API 文档](https://docs-agentos.resultscloud.com/api-reference/agent/voice-js-sdk)

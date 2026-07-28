@@ -1,6 +1,8 @@
-# Baiyu Intelligent Voice Call JS SDK
+# Baigong Intelligent Voice Call JS SDK
 
-> A lightweight real-time intelligent voice conversation SDK based on WebRTC, enabling quick integration of high-quality voice AI interaction into web applications.
+English | [简体中文](README.zh-CN.md)
+
+A lightweight real-time intelligent voice conversation SDK based on WebRTC, enabling quick integration of high-quality voice AI interaction into web applications.
 
 ## Quick Start
 
@@ -64,9 +66,8 @@ try {
 
 Before using this SDK, you need to:
 
-1. Create an Agent (Robot) on the [Bairong Baigong Platform](https://alidocs.dingtalk.com/i/nodes/QBnd5ExVEanmejPpT29ZQ1R7VyeZqMmz)
-2. Complete API publishing to obtain `robotKey` and `robotToken`
-3. Ensure your application runs in a secure context (HTTPS or localhost)
+1. Refer to [Voice Call Integration Preparation](https://docs-agentos.resultscloud.com/api-reference/agent/voice-prep) to create an Agent. After completing the API-based release, obtain the access credentials `robotKey` and `robotToken`.
+2. Ensure your application runs in a secure context (HTTPS or localhost)
 
 > ⚠️ `robotKey` and `robotToken` are sensitive credentials. Keep them safe to avoid leaks and billing loss. In production, it's recommended to exchange for temporary credentials via your backend.
 
@@ -220,3 +221,5 @@ npm run demo
 ```
 
 ## Documentation
+
+- [Official API Documentation](https://docs-agentos.resultscloud.com/api-reference/agent/voice-js-sdk)

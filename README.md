@@ -1,8 +1,8 @@
 # VoiceAI-ConversationalAI
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+English | [简体中文](README.zh-CN.md)
 
-> One‑stop intelligent voice conversation solution – lightweight real‑time voice interaction SDKs for Web, Android, and iOS, enabling quick integration of AI agent voice capabilities.
+One‑stop intelligent voice conversation solution – lightweight real‑time voice interaction SDKs for Web, Android, and iOS, enabling quick integration of AI agent voice capabilities.
 
 ## Features
 
@@ -27,7 +27,7 @@
 
 ## Common Prerequisites
 
-1. Create an Agent on your voice AI platform (Bairong Baigong) and obtain `robotKey` + `robotToken`
+1. Refer to [Voice Call Integration Preparation](https://docs-agentos.resultscloud.com/api-reference/agent/voice-prep) to create an Agent. After completing the API-based release, obtain the access credentials `robotKey` and `robotToken`.
 2. Ensure the client runs in a secure environment:
    - Web: HTTPS or localhost
    - Android / iOS: normal network permissions

@@ -1,14 +1,16 @@
-# 百语智能语音通话 Android SDK
+# 百工智能语音通话 Android SDK
 
-> 轻量级实时智能语音对话开发工具包，基于 WebRTC 技术，为 Android 应用快速集成高质量智能语音交互能力。
+简体中文 | [English](README.md)
+
+轻量级实时智能语音对话开发工具包，基于 WebRTC 技术，为 Android 应用快速集成高质量智能语音交互能力。
 
 ## 产品概述
-百语智能语音通话 Android SDK 封装了服务端连接、音频采集播放、对话控制等底层复杂逻辑，帮助开发者仅需 10 分钟即可为 Android 应用接入端到端的实时语音对话能力。
-SDK 深度对接百语平台智能体机器人，适用于智能客服、语音助手、智能外呼等多种业务场景。
+百工智能语音通话 Android SDK 封装了服务端连接、音频采集播放、对话控制等底层复杂逻辑，帮助开发者仅需 10 分钟即可为 Android 应用接入端到端的实时语音对话能力。
+SDK 深度对接百工平台智能体机器人，适用于智能客服、语音助手、智能外呼等多种业务场景。
 
 ## 主要特性
 - 🎤 **开箱即用**：封装 WebRTC、音频采集与播放、连接管理等底层细节
-- 🔐 **凭证认证**：使用 robotKey + robotToken 安全接入百语平台智能体
+- 🔐 **凭证认证**：使用 robotKey + robotToken 安全接入百工平台智能体
 - 🎙️ **实时语音对话**：双向流式语音识别与合成，低延迟自然交互
 - 🛑 **打断支持**：可随时打断机器人回复，对话流程更自然
 - 🔇 **音频控制**：支持动态静音 / 取消静音麦克风
@@ -18,16 +20,15 @@ SDK 深度对接百语平台智能体机器人，适用于智能客服、语音�
 ## 接入前提
 使用本 SDK 前，您需要：
 
-1. 在 [百融百语平台](https://alidocs.dingtalk.com/i/nodes/QBnd5ExVEanmejPpT29ZQ1R7VyeZqMmz) 创建智能体 Agent（Robot）
-2. 通过 API 方式发布智能体，获取 `robotKey` 和 `robotToken`
-3. 应用目标系统版本不低于 Android 7.0（API 24）
+1. 参考 [语音通话接入准备工作](https://docs-agentos.resultscloud.com/api-reference/agent/voice-prep) 创建智能体 Agent，完成 API 方式发布后，获取接入凭证 `robotKey` 和 `robotToken`
+2. 应用目标系统版本不低于 Android 7.0（API 24）
 
 > ⚠️ `robotKey` 和 `robotToken` 为敏感凭证，请妥善保管，避免泄露造成计费损失。生产环境建议通过服务端换取临时凭证，严禁在客户端硬编码。
 
 ## 快速开始
 
 ### 1. 加载 SDK
-将 `BR_AI_Voice_RTC_x.x.x.aar` 放入宿主模块的 `libs/` 目录，在 `build.gradle.kts` 中添加依赖：
+从本仓库 [GitHub Releases](https://github.com/Bairong-Xdynamics/VoiceAI-ConversationalAI/releases) 下载 `BR_AI_Voice_RTC_x.x.x.aar`，放入宿主模块的 `libs/` 目录，在 `build.gradle.kts` 中添加依赖：
 
 ```kotlin
 dependencies {
@@ -66,8 +67,8 @@ import com.brgroup.voice.ai.ErrorMessage
 // 1. 确保已获取麦克风权限后，构造客户端实例
 val client = ChatClient(
     context = applicationContext,
-    robotKey = "your_robot_key",      // 从百语平台获取
-    robotToken = "your_robot_token",  // 从百语平台获取
+    robotKey = "your_robot_key",      // 从百工平台获取
+    robotToken = "your_robot_token",  // 从百工平台获取
     userName = "unique-user-id"       // 唯一用户标识
 )
 
@@ -201,8 +202,8 @@ ChatClient(
 
 **参数说明**
 - `context: Context` – 应用上下文，建议使用 `applicationContext`
-- `robotKey: String` – 百语平台智能体 Key
-- `robotToken: String` – 百语平台智能体 Token
+- `robotKey: String` – 百工平台智能体 Key
+- `robotToken: String` – 百工平台智能体 Token
 - `userName: String` – 唯一用户标识（必填，不同用户必须不同）
 
 #### 方法
