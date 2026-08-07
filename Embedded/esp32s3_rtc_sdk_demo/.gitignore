@@ -1,0 +1,10 @@
+tmp/
+managed_components/
+build/
+.vscode/
+sdkconfig.old
+dependencies.lock
+.env
+.DS_Store
+.cache
+

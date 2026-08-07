@@ -22,6 +22,7 @@ One‑stop intelligent voice conversation solution – lightweight real‑time v
 | Web | JavaScript / TypeScript | ✅ Available |
 | Android | Kotlin / Java | ✅ Available |
 | iOS | Swift / Objective-C | ✅ Available |
+| Embedded | C++ | ✅ Available |
 
 > See each subdirectory’s README for detailed API docs and usage examples.
 

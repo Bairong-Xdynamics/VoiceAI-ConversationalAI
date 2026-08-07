@@ -1,0 +1,5 @@
+## ESP-IDF Component Manager：拉取依赖至 managed_components/
+## 重新配置：idf.py reconfigure 或 idf.py build
+dependencies:
+  78/esp-wifi-connect: ~2.6.2
+  78/esp-ml307: "~3.5.1"

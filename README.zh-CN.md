@@ -22,6 +22,7 @@
 | Web     | JavaScript / TypeScript | ✅ 可用   |
 | Android | Kotlin / Java           | ✅ 可用 |
 | iOS     | Swift / Objective-C     | ✅ 可用 |
+| Embedded| C++                     | ✅ 可用 |
 
 
 > 具体 API 文档和使用示例请见各子目录下的 README。
