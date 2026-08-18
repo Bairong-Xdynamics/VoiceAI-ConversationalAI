@@ -16,19 +16,39 @@ Deeply integrated with Baigong platform agents, it is suitable for intelligent c
 - 🛑 **Interruption Support**: Interrupt robot replies at any time for natural dialogue
 - 🔇 **Audio Control**: Dynamically mute / unmute the microphone
 - 📡 **Complete Delegate System**: Rich delegate callbacks for session state, message flow and errors
-- 📱 **Native Support**: iOS 13.0+ compatible, arm64 real device architecture
+- 📱 **Native Support**: iOS 13.0+, universal binary (arm64 device + x86_64 simulator)
 
 ## Prerequisites
 Before using this SDK:
 
 1. Refer to [Voice Call Integration Preparation](https://docs-agentos.resultscloud.com/api-reference/agent/voice-prep) to create an Agent. After completing the API-based release, obtain the access credentials `robotKey` and `robotToken`.
-2. Target iOS 13.0 or higher; only real devices are supported
+2. Target iOS 13.0 or higher; supports real devices and the simulator
 
 > ⚠️ `robotKey` and `robotToken` are sensitive credentials. Keep them secure to avoid billing loss. Use server-side temporary tokens in production. **Never hardcode them in client code.**
 
 ## Quick Start
 
 ### 1. Import SDK into Project
+
+**Method A: CocoaPods (Recommended)**
+
+Add to your `Podfile`:
+
+```ruby
+platform :ios, '13.0'
+use_frameworks!
+
+target 'YourTarget' do
+  pod 'BRAIVoiceRTCKit', :podspec => 'https://raw.githubusercontent.com/Bairong-Xdynamics/VoiceAI-ConversationalAI/main/iOS/BRAIVoiceRTCKit.podspec'
+end
+```
+
+Then run `pod install` and open the generated `.xcworkspace`.
+
+> The underlying Agora RTC frameworks are already nested inside `BRAIVoiceRTCKit.framework` and pre-signed — you don't need to add them separately.
+
+**Method B: Manual Integration**
+
 1. Download and extract the SDK package from this repo's [GitHub Releases](https://github.com/Bairong-Xdynamics/VoiceAI-ConversationalAI/releases) to get `BRAIVoiceRTCKit.framework`
 2. Open your Xcode project, right-click the project name and select **Add Files to "ProjectName"…**
 3. Select `BRAIVoiceRTCKit.framework`, check **Copy items if needed**, select your target in Add to targets, then click Add
@@ -286,10 +306,17 @@ Delegate protocol for receiving all SDK events.
 | Item | Requirement |
 |------|-------------|
 | System | iOS 13.0+ |
-| Architecture | arm64 real device only; simulator not supported |
+| Architecture | arm64 real device + x86_64 simulator (Apple Silicon simulator runs via Rosetta) |
 | Build Options | BitCode is not supported |
 | Requirements | Microphone + network connection |
 
 ## Run Demo
-- Production SDK demo project source code
-- Import into Xcode, configure `robotKey` and `robotToken`, then run on a real device
+The demo project lives in `iOS/BRAIVoiceRTCDemo` and integrates the SDK via CocoaPods as a third-party app:
+
+```bash
+cd iOS
+pod install
+open BRAIVoiceRTCDemo.xcworkspace
+```
+
+In Xcode, configure `robotKey` and `robotToken` (via the in-app credential page), then run on a real device.

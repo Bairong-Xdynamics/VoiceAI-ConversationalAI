@@ -15,19 +15,39 @@ SDK 深度对接百工平台智能体机器人，适用于智能客服、语音�
 - 🛑 **打断支持**：可随时打断机器人回复，对话流程更自然
 - 🔇 **音频控制**：支持动态静音 / 取消静音麦克风
 - 📡 **完整回调体系**：提供会话状态、消息流转、错误等丰富代理回调
-- 📱 **原生适配**：支持 iOS 13.0 及以上系统，arm64 真机架构
+- 📱 **原生适配**：支持 iOS 13.0 及以上系统，通用二进制（arm64 真机 + x86_64 模拟器）
 
 ## 接入前提
 使用本 SDK 前，您需要：
 
 1. 参考 [语音通话接入准备工作](https://docs-agentos.resultscloud.com/api-reference/agent/voice-prep) 创建智能体 Agent，完成 API 方式发布后，获取接入凭证 `robotKey` 和 `robotToken`
-2. 应用目标系统版本不低于 iOS 13.0，仅支持真机运行
+2. 应用目标系统版本不低于 iOS 13.0，支持真机与模拟器运行
 
 > ⚠️ `robotKey` 和 `robotToken` 为敏感凭证，请妥善保管，避免泄露造成计费损失。生产环境建议通过服务端换取临时凭证，严禁在客户端硬编码。
 
 ## 快速开始
 
 ### 1. 导入 SDK 到项目
+
+**方式 A：CocoaPods（推荐）**
+
+在 `Podfile` 中添加：
+
+```ruby
+platform :ios, '13.0'
+use_frameworks!
+
+target 'YourTarget' do
+  pod 'BRAIVoiceRTCKit', :podspec => 'https://raw.githubusercontent.com/Bairong-Xdynamics/VoiceAI-ConversationalAI/main/iOS/BRAIVoiceRTCKit.podspec'
+end
+```
+
+然后执行 `pod install`，打开生成的 `.xcworkspace` 即可。
+
+> 底层 Agora RTC 依赖已嵌套在 `BRAIVoiceRTCKit.framework` 内部并预签名，无需单独添加。
+
+**方式 B：手动集成**
+
 1. 从本仓库 [GitHub Releases](https://github.com/Bairong-Xdynamics/VoiceAI-ConversationalAI/releases) 下载并解压 SDK 包，获取 `BRAIVoiceRTCKit.framework`
 2. 打开 Xcode 工程，右键点击工程名称，选择 **Add Files to "工程名"…**
 3. 选中 `BRAIVoiceRTCKit.framework`，勾选 **Copy items if needed**，并在 Add to targets 中选择目标 Target，点击 Add 完成导入
@@ -285,11 +305,18 @@ NSString *version = [BRAIVoiceRTCManager sdkVersion];
 | 兼容项 | 具体要求 |
 |--------|----------|
 | 系统版本 | iOS 13.0 及以上 |
-| 设备架构 | 仅支持真机 arm64 架构，不支持模拟器 |
+| 设备架构 | arm64 真机 + x86_64 模拟器（Apple Silicon 模拟器通过 Rosetta 运行） |
 | 编译选项 | 不支持 BitCode |
 | 运行要求 | 设备具备麦克风与网络连接 |
 
 ## 运行示例
-- 正式环境 SDK Demo 项目源码
-- 导入 Xcode 后配置 `robotKey` 与 `robotToken`，连接真机即可运行
+Demo 工程位于 `iOS/BRAIVoiceRTCDemo`，以第三方身份通过 CocoaPods 接入 SDK：
+
+```bash
+cd iOS
+pod install
+open BRAIVoiceRTCDemo.xcworkspace
+```
+
+在 Xcode 中通过 App 内页面配置 `robotKey` 与 `robotToken`，连接真机即可运行。
 

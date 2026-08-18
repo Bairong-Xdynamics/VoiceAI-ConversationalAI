@@ -1,0 +1,11 @@
+# BRAIVoiceRTCDemo — 以第三方身份接入 BRAIVoiceRTCKit SDK
+#
+# 正式发布：从 demo 仓库的 GitHub Release 拉取（tag 需与发布版本一致）
+#   pod 'BRAIVoiceRTCKit', :podspec => 'https://raw.githubusercontent.com/Bairong-Xdynamics/VoiceAI-ConversationalAI/main/iOS/BRAIVoiceRTCKit.podspec'
+
+platform :ios, '13.0'
+use_frameworks!
+
+target 'BRAIVoiceRTCDemo' do
+  pod 'BRAIVoiceRTCKit', :podspec => 'https://raw.githubusercontent.com/Bairong-Xdynamics/VoiceAI-ConversationalAI/main/iOS/BRAIVoiceRTCKit.podspec'
+end
